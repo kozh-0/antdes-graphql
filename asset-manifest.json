@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/antdes-graphql/static/css/main.00341350.css",
+    "main.js": "/antdes-graphql/static/js/main.0635b9d1.js",
+    "index.html": "/antdes-graphql/index.html",
+    "main.00341350.css.map": "/antdes-graphql/static/css/main.00341350.css.map",
+    "main.0635b9d1.js.map": "/antdes-graphql/static/js/main.0635b9d1.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.00341350.css",
+    "static/js/main.0635b9d1.js"
+  ]
+}
