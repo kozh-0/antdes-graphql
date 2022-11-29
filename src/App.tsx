@@ -15,8 +15,8 @@ export default function App() {
 
       <Content style={{ minHeight: 'calc(100vh - 131px)' }}>
         <Routes>
-          <Route path="/" element={<MyTable />} />
-          <Route path="/smth" element={<Smth />} />
+          <Route path="/antdes-graphql" element={<MyTable />} />
+          <Route path="/antdes-graphql/smth" element={<Smth />} />
         </Routes>
 
       </Content>

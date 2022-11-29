@@ -5,8 +5,8 @@ const { Header } = Layout;
 
 const flx = { display: 'flex', alignItems: 'center', justifyContent: 'space-between' };
 const arr = [
-    { label: 'Home', key: '/' },
-    { label: 'Smth', key: '/smth' },
+    { label: 'Home', key: '/antdes-graphql' },
+    { label: 'Smth', key: '/antdes-graphql/smth' },
 ]
 
 
