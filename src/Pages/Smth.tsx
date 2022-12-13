@@ -1,4 +1,4 @@
-import { Col, Spin } from "antd";
+import { Card, Col, Spin } from "antd";
 import { LoadingOutlined } from '@ant-design/icons';
 
 import { useQuery } from "@apollo/client";
@@ -15,9 +15,9 @@ export default function Smth() {
 
 
   if (loading) {
-    return <Col xs={24} offset={12} style={{marginTop:'40px'}}>
-    <Spin tip='Loading...' indicator={antIcon} />
-  </Col>
+    return <Col xs={24} offset={12} style={{ marginTop: '40px' }}>
+      <Spin tip='Loading...' indicator={antIcon} />
+    </Col>
   }
 
   if (error) {
@@ -44,24 +44,19 @@ export default function Smth() {
   //     render: (image: string) => <Image height={100} src={image} alt='img' />
   //   },
   // ];
-  
 
 
-  return (
+
+  return <>
+  <h1 style={{textAlign: 'center'}}>Total countries: {data.countries.length}</h1>
     <Col xs={24} md={{ span: 20, offset: 2 }} className='kek'>
-        {data.countries.map((el:any, idx:number) => (
-          <div key={el.name} className='smth_item'>
-            <h2>{idx+1}. {el.name}</h2>
-            <h3>Capital - {el.capital}</h3>
-            <div>
-              {/* <h2>LANG :</h2> {el.languages.map((el:any, idx:number, arr: any[]) => (
-                <h3 key={idx}>{el.name} {arr.length ? }, </h3>
-              ))} */}
-            </div>
-
-          </div>
-        ))}
-    </Col>
-
-  )
+      {data.countries.map((el: any, idx: number) => (
+        <Card size="small" title={el.name + ' (' + el.capital + ')'} className='country'>
+          <p>Langs: {el.languages.map((el: any, idx: number, arr: any[]) => <>
+            {arr[arr.length - 1].name === el.name ? `${el.name}.` : `${el.name}, `}
+          </>)}</p>
+        </Card>
+      ))}
+    </Col>;
+  </>
 }
