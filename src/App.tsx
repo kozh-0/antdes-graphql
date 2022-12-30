@@ -5,6 +5,7 @@ import MyHeader from "./Components/Header";
 import MyFooter from "./Components/Footer";
 import { Route, Routes } from "react-router-dom";
 import Smth from "./Pages/Smth";
+import Csv from "./Pages/Csv";
 const { Content } = Layout;
 
 
@@ -17,6 +18,7 @@ export default function App() {
         <Routes>
           <Route path="/antdes-graphql" element={<MyTable />} />
           <Route path="/antdes-graphql/smth" element={<Smth />} />
+          <Route path="/antdes-graphql/csv" element={<Csv />} />
         </Routes>
 
       </Content>
